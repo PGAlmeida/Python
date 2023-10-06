@@ -71,3 +71,29 @@ else:
     print('Numero encontrado')
     print('quantidade de vezes jogadas: ' %cont)
 '''   
+
+'''
+print(' "T" para tinto, "B" para branco e "R" para rosê.')
+tipo = input('Digite o tipo de vinho: ')
+tinto = 0
+rose = 0
+branco = 0
+
+while(tipo != 'f'):
+    if tipo == 't':
+        tinto = int(input('Digite a quantidade de vinho tinto: '))
+    elif tipo == 'b':
+         branco = int(input('Digite a quantidade de vinho branco: '))
+    else:
+         rose = int(input('Digite a quantidade de vinho rose: '))
+    print(' "T" para tinto, "B" para branco e "R" para rosê.')
+    tipo = input('Digite o tipo de vinho: ')
+else:
+    resul = tinto+branco+rose
+    tintoT = (tinto/resul)*100
+    roseT = (rose/resul)*100
+    brancoT = (branco/resul)*100
+    print('Quantidade de vinho tinto %0.2f %, Quantidade de vinho branco %0.2f %, Quantidade de vinho branco %0.2f %' %(tintoT, brancoT, roseT))
+'''
+
+num = int(input('Digite um número: '))
