@@ -1,0 +1,7 @@
+#comentario --- linha
+
+'''
+comentario 
+bloco
+'''
+
