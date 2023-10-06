@@ -38,6 +38,7 @@ else:
     print('A media é : %d' %(soma/cont))
 '''
 
+'''
 soma = 0
 cont = 0
 num = int(input('Digite um número: '))
@@ -52,3 +53,21 @@ else:
     else:
         resul = soma/cont
         print('A media é : %d' %resul)
+'''
+
+'''
+num = int(input('Digite um número: '))
+sorte = int(input('Digite um número: '))
+cont = 0
+while(sorte != num):
+    if sorte > num:
+        print('Digite um numero menor')
+        sorte = int(input('Digite um novo número: '))
+    elif sorte < num:
+        print('Digite um numero maior')
+        sorte = int(input('Digite um novo número: '))
+    cont += 1
+else:
+    print('Numero encontrado')
+    print('quantidade de vezes jogadas: ' %cont)
+'''   
