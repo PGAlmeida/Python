@@ -85,7 +85,7 @@ def segundoMaior(vet, x):
     m = maior(vet, x)
     seg = vet[0]
     for i in range(x):
-        if vet[i] > seg and vet[i] < m:
+        if vet[i] > seg and vet[i] != m:
             seg = vet[i]
     return seg
 

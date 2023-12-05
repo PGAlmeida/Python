@@ -19,7 +19,7 @@ while True:
         break
     atraso = int(input('Entre com o número de dias em atraso: '))
     pagar = pagamento(valorPrestacao, atraso)
-    print("Valor a ser pago: R$ %0.2f" %pagar)
+    print('Valor a ser pago: R$ %0.2f' %pagar)
     totalPrestacao += 1
     valorTotal += pagar
 
@@ -32,7 +32,7 @@ print('Valor total pago: R$ %0.2f' %valorTotal)
 
 def calculaModa(vetorModa):
     if not vetorModa:
-        return "O Vetor está vazio, a Moda não pode ser calculada."
+        return 'O Vetor está vazio, a Moda não pode ser calculada.'
     vetorModa.sort()
     moda = []
     frequenciaMax = 0
@@ -50,15 +50,15 @@ def calculaModa(vetorModa):
                 moda.append(numeroAtual)
             numeroAtual = vetorModa[i]
             frequenciaAtual = 1
-
+            
     if frequenciaAtual > frequenciaMax:
         moda = [numeroAtual]
     elif frequenciaAtual == frequenciaMax:
         moda.append(numeroAtual)
     if frequenciaMax == 1:
-        return "Não existe Moda neste Vetor."
+        return 'Não existe Moda neste Vetor.'
     else:
-        return "A Moda é: {}".format(', '.join(map(str, moda)))
+        return 'A Moda é: {}'.format(', '.join(map(str, moda)))
 
 vetorModa = []
 n = int(input('entre com a quantidade: '))
@@ -74,7 +74,7 @@ import random
 
 def escolher():
     palavras = []
-    with open("oi.txt", "r", encoding="utf-8") as arquivo:
+    with open('palavra_jogo.txt', 'r', encoding='utf-8') as arquivo:
         for linha in arquivo:
             linha = linha.strip()
             palavras.append(linha)
@@ -83,12 +83,12 @@ def escolher():
     return palavraEscolhida
 
 def mostrar(palavra, letraCorreta):
-    palavraOculta = ""
+    palavraOculta = ''
     for letra in palavra:
         if letra in letraCorreta:
-            palavraOculta += letra + " "
+            palavraOculta += letra + ' '
         else:
-            palavraOculta += "_ "
+            palavraOculta += '_ '
     return palavraOculta.strip()
 
 
@@ -97,16 +97,15 @@ tentativaMaxima = random.randint(6, 11)
 letraCorreta = set()
 letraIncorreta = set()
 
-print("Bem-vindo ao jogo de adivinhação de palavras ocultas!")
-print("Tente adivinhar a palavra oculta. Boa sorte!")
+print('Tente adivinhar a palavra oculta')
 
 tentativas = 0
 
 while tentativas < tentativaMaxima:
-    letra = input("\nDigite uma letra: ").lower()
+    letra = input('\nDigite uma letra: ').lower()
     
     if letra in letraCorreta or letra in letraIncorreta:
-        print("Você já tentou esta letra. Tente novamente.")
+        print('Você já tentou esta letra. Tente novamente.')
         continue
     
     if letra in palavra:
@@ -116,16 +115,16 @@ while tentativas < tentativaMaxima:
         tentativas += 1
     
     palavraOculta = mostrar(palavra, letraCorreta)
-    print("Palavra: %s"  %palavraOculta)
-    print("Letras corretas: " + ", ".join(letraCorreta))
-    print("Letras incorretas: " + ", ".join(letraIncorreta))
-    print("Tentativas restantes: %s" %(tentativaMaxima - tentativas))
+    print('Palavra: %s'  %palavraOculta)
+    print('Letras corretas: ' + ', '.join(letraCorreta))
+    print('Letras incorretas: ' + ', '.join(letraIncorreta))
+    print('Tentativas restantes: %s' %(tentativaMaxima - tentativas))
     
     if set(palavra) == letraCorreta:
-        print("Parabéns! Você adivinhou a palavra: %s"  %palavra)
+        print('Parabéns! Você adivinhou a palavra: %s'  %palavra)
         break
 
 if set(palavra) != letraCorreta:
-    print("Você perdeu! A palavra era: %s " %palavra)
+    print('Você perdeu! A palavra era: %s ' %palavra)
 
 
