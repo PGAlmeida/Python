@@ -47,7 +47,7 @@ animation.color("aqua")
 for i in range(170):
     animation.circle(i)
     animation._rotate(5)
-'''
+
 
 from turtle import *
 import colorsys
@@ -64,3 +64,16 @@ for i in range(250):
     h+=0.005
 
 done()
+'''
+
+from turtle import *
+
+color("green")
+bgcolor("black")
+speed(10)
+hideturtle()
+b = 0
+while b < 200:
+    right(b)
+    forward(b * 3)
+    b = b + 1
