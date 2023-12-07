@@ -7,3 +7,4 @@ while True:
     for lista in cycle(listas):
         print(lista)
         sleep(1)
+    
