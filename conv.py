@@ -13,7 +13,7 @@ def convert_to_pdf():
 root = tk.Tk()
 root.title("Converter Word em PDF")
 
-convert_buttom = tk.Button(root, text="converter Worde em PDF", command=convert_to_pdf)
+convert_buttom = tk.Button(root, text="converter Word em PDF", command=convert_to_pdf)
 convert_buttom.pack(pady=20)
 
 status_label = tk.Label(root, text="", fg="green")
