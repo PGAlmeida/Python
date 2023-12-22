@@ -19,10 +19,12 @@ def tri(tamanho):
     for i in range(1, tamanho+1, 1):
         print("*"*i)
 
-diamante(50)
+tam = int(input("Digite o tamanho: "))
 print('-------------------------------------------------')
-quadro(5)
+diamante(tam)
 print('-------------------------------------------------')
-triangulo(5)
+quadro(tam)
 print('-------------------------------------------------')
-tri(5)
+triangulo(tam)
+print('-------------------------------------------------')
+tri(tam)
