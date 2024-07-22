@@ -1,7 +1,7 @@
 from pytube import YouTube
 import os 
 
-url = "https://www.youtube.com/watch?v=Yi0wQJHekak&ab_channel=RenatoCariani"
+url = "https://www.youtube.com/watch?v=bM29vkYlilc"
 
 video = YouTube(url)
 
